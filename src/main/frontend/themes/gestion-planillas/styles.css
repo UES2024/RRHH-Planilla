@@ -1,0 +1,5 @@
+@import url('./main-layout.css');
+@import url('./views/inicio-view.css');
+@import url('./views/view-control-empleados-view.css');
+@import url('./views/formulario-nuevo-empleado-view.css');
+@import url('./views/gestionar-planilla-view.css');
