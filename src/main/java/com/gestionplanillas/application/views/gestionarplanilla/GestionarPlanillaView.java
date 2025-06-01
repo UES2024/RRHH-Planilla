@@ -1,7 +1,7 @@
 package com.gestionplanillas.application.views.gestionarplanilla;
 
-import com.gestionplanillas.application.data.SamplePerson;
-import com.gestionplanillas.application.services.SamplePersonService;
+
+import com.gestionplanillas.application.data.Empleado;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
@@ -27,10 +27,11 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.vaadin.lineawesome.LineAwesomeIconUrl;
 
+
+@PermitAll
 @PageTitle("Gestionar Planilla")
 @Route("view-gestionar-planilla")
 @Menu(order = 3, icon = LineAwesomeIconUrl.MONEY_BILL_WAVE_SOLID)
-@PermitAll
 @Uses(Icon.class)
 public class GestionarPlanillaView extends Composite<VerticalLayout> {
 
@@ -47,7 +48,7 @@ public class GestionarPlanillaView extends Composite<VerticalLayout> {
         Button buttonSecondary = new Button();
         Button buttonSecondary2 = new Button();
         HorizontalLayout layoutRow5 = new HorizontalLayout();
-        Grid basicGrid = new Grid(SamplePerson.class);
+        Grid basicGrid = new Grid(Empleado.class);
         getContent().setWidth("100%");
         getContent().getStyle().set("flex-grow", "1");
         layoutRow.setWidthFull();
@@ -103,7 +104,7 @@ public class GestionarPlanillaView extends Composite<VerticalLayout> {
         layoutRow5.getStyle().set("flex-grow", "1");
         basicGrid.setWidth("100%");
         basicGrid.getStyle().set("flex-grow", "0");
-        setGridSampleData(basicGrid);
+        //setGridSampleData(basicGrid);
         getContent().add(layoutRow);
         layoutRow.add(comboBox);
         layoutRow.add(comboBox2);
@@ -132,10 +133,10 @@ public class GestionarPlanillaView extends Composite<VerticalLayout> {
         comboBox.setItemLabelGenerator(item -> ((SampleItem) item).label());
     }
 
-    private void setGridSampleData(Grid grid) {
+   /*  private void setGridSampleData(Grid grid) {
         grid.setItems(query -> samplePersonService.list(VaadinSpringDataHelpers.toSpringPageRequest(query)).stream());
     }
 
     @Autowired()
-    private SamplePersonService samplePersonService;
+    private SamplePersonService samplePersonService;*/
 }

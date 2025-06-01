@@ -1,20 +1,25 @@
 package com.gestionplanillas.application.services;
 
 import com.gestionplanillas.application.data.User;
-import com.gestionplanillas.application.data.UserRepository;
+import com.gestionplanillas.application.repository.UserRepository;
+
 import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
 
 @Service
 public class UserService {
 
     private final UserRepository repository;
+    private final PasswordEncoder passwordEncoder;
 
-    public UserService(UserRepository repository) {
+    public UserService(UserRepository repository,PasswordEncoder passwordEncoder) {
         this.repository = repository;
+        this.passwordEncoder = passwordEncoder;
     }
 
     public Optional<User> get(Long id) {
@@ -22,6 +27,8 @@ public class UserService {
     }
 
     public User save(User entity) {
+        String password = entity.getHashedPassword();
+        entity.setHashedPassword(this.passwordEncoder.encode(password));
         return repository.save(entity);
     }
 

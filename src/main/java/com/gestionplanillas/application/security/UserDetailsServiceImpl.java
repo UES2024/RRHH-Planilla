@@ -1,7 +1,8 @@
 package com.gestionplanillas.application.security;
 
 import com.gestionplanillas.application.data.User;
-import com.gestionplanillas.application.data.UserRepository;
+import com.gestionplanillas.application.repository.UserRepository;
+
 import java.util.List;
 import java.util.stream.Collectors;
 import org.springframework.security.core.GrantedAuthority;

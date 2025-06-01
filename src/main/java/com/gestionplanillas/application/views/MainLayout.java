@@ -2,6 +2,7 @@ package com.gestionplanillas.application.views;
 
 import com.gestionplanillas.application.data.User;
 import com.gestionplanillas.application.security.AuthenticatedUser;
+//import com.gestionplanillas.application.security.AuthenticatedUser;
 import com.gestionplanillas.application.views.formularionuevoempleado.FormularioNuevoEmpleadoView;
 import com.gestionplanillas.application.views.gestionarplanilla.GestionarPlanillaView;
 import com.gestionplanillas.application.views.inicio.InicioView;
@@ -84,12 +85,12 @@ public class MainLayout extends AppLayout {
 
     }
 
-    private AuthenticatedUser authenticatedUser;
-    private AccessAnnotationChecker accessChecker;
+    private final AuthenticatedUser authenticatedUser;
+    private final AccessAnnotationChecker accessChecker;
 
-    public MainLayout(AuthenticatedUser authenticatedUser, AccessAnnotationChecker accessChecker) {
+    public MainLayout(AuthenticatedUser authenticatedUser, AccessAnnotationChecker accessAnnotationChecker) {
         this.authenticatedUser = authenticatedUser;
-        this.accessChecker = accessChecker;
+        this.accessChecker = accessAnnotationChecker;
 
         addToNavbar(createHeaderContent());
     }
@@ -109,20 +110,20 @@ public class MainLayout extends AppLayout {
         if (maybeUser.isPresent()) {
             User user = maybeUser.get();
 
-            Avatar avatar = new Avatar(user.getName());
-            StreamResource resource = new StreamResource("profile-pic",
-                    () -> new ByteArrayInputStream(user.getProfilePicture()));
-            avatar.setImageResource(resource);
-            avatar.setThemeName("xsmall");
-            avatar.getElement().setAttribute("tabindex", "-1");
+           // Avatar avatar = new Avatar(user.getUsername());
+            //StreamResource resource = new StreamResource("profile-pic",
+            //        () -> new ByteArrayInputStream(user.getProfilePicture()));
+            //avatar.setImageResource(resource);
+            //avatar.setThemeName("xsmall");
+            //avatar.getElement().setAttribute("tabindex", "-1");
 
             MenuBar userMenu = new MenuBar();
             userMenu.setThemeName("tertiary-inline contrast");
 
             MenuItem userName = userMenu.addItem("");
             Div div = new Div();
-            div.add(avatar);
-            div.add(user.getName());
+            //div.add(avatar);
+            div.add(user.getUsername());
             div.add(new Icon("lumo", "dropdown"));
             div.addClassNames(LumoUtility.Display.FLEX, LumoUtility.AlignItems.CENTER, LumoUtility.Gap.SMALL);
             userName.add(div);
@@ -144,7 +145,7 @@ public class MainLayout extends AppLayout {
         list.addClassNames(Display.FLEX, Gap.SMALL, ListStyleType.NONE, Margin.NONE, Padding.NONE);
         nav.add(list);
 
-        for (MenuItemInfo menuItem : createMenuItems()) {
+       for (MenuItemInfo menuItem : createMenuItems()) {
             if (accessChecker.hasAccess(menuItem.getView())) {
                 list.add(menuItem);
             }

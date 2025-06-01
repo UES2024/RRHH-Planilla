@@ -1,7 +1,7 @@
 package com.gestionplanillas.application.views.viewcontrolempleados;
 
-import com.gestionplanillas.application.data.SamplePerson;
-import com.gestionplanillas.application.services.SamplePersonService;
+
+import com.gestionplanillas.application.data.Empleado;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
@@ -46,7 +46,7 @@ public class ViewControlEmpleadosView extends Composite<VerticalLayout> {
         Button buttonSecondary = new Button();
         Button buttonSecondary2 = new Button();
         HorizontalLayout layoutRow3 = new HorizontalLayout();
-        Grid stripedGrid = new Grid(SamplePerson.class);
+        Grid stripedGrid = new Grid(Empleado.class);
         HorizontalLayout layoutRow4 = new HorizontalLayout();
         Button buttonPrimary = new Button();
         Button buttonPrimary2 = new Button();
@@ -136,9 +136,6 @@ public class ViewControlEmpleadosView extends Composite<VerticalLayout> {
     }
 
     private void setGridSampleData(Grid grid) {
-        grid.setItems(query -> samplePersonService.list(VaadinSpringDataHelpers.toSpringPageRequest(query)).stream());
+        //grid.setItems(query -> samplePersonService.list(VaadinSpringDataHelpers.toSpringPageRequest(query)).stream());
     }
-
-    @Autowired()
-    private SamplePersonService samplePersonService;
 }

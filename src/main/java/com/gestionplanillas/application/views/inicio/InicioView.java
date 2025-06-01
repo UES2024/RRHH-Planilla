@@ -32,7 +32,7 @@ import jakarta.annotation.security.PermitAll;
 import org.vaadin.lineawesome.LineAwesomeIconUrl;
 
 @PageTitle("Inicio")
-@Route("")
+@Route("/inicio")
 @Menu(order = 0, icon = LineAwesomeIconUrl.HOME_SOLID)
 @PermitAll
 public class InicioView extends Main {
