@@ -1,6 +1,7 @@
 package com.gestionplanillas.application.data;
 
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -31,7 +32,10 @@ public class Empleado {
     @Column(name = "apellidos")
     private String apellidos;
 
+    @OneToOne(mappedBy = "empleado" , cascade = CascadeType.ALL)
+    private ContratoEmpleado contratoEmpleado;
+
     @OneToOne()
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "user_id")
     private User user;
 }
