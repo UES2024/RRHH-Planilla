@@ -1,0 +1,18 @@
+{
+  "productionMode": false,
+  "eagerServerLoad": false,
+  "npmFolder": "C:\\Users\\black\\RRHH-Planilla",
+  "node.version": "v22.14.0",
+  "node.download.root": "https://nodejs.org/dist/",
+  "frontendFolder": "C:\\Users\\black\\RRHH-Planilla\\src\\main\\frontend",
+  "connect.javaSourceFolder": "C:\\Users\\black\\RRHH-Planilla\\src\\main\\java",
+  "javaResourceFolder": "C:\\Users\\black\\RRHH-Planilla\\src\\main\\resources",
+  "connect.applicationProperties": "C:\\Users\\black\\RRHH-Planilla\\src\\main\\resources\\application.properties",
+  "connect.openApiFile": "C:\\Users\\black\\RRHH-Planilla\\target\\generated-resources\\openapi.json",
+  "project.frontend.generated": "C:\\Users\\black\\RRHH-Planilla\\src\\main\\frontend\\generated",
+  "pnpm.enable": false,
+  "bun.enable": false,
+  "require.home.node": false,
+  "build.folder": "target",
+  "react.enable": true
+}
