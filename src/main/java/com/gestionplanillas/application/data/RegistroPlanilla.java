@@ -48,11 +48,6 @@ public class RegistroPlanilla {
     @JoinColumn(name = "id_planilla")
     private Planilla planilla;
 
-    @OneToMany(mappedBy =  "registroPlanilla", cascade = CascadeType.ALL)
-    private List<DetalleDescuentoLey> detallesDescuentoLey;
-
-    @OneToMany(mappedBy = "registroPlanilla", cascade = CascadeType.ALL)
-    private List<DetallePrestacionLey> detallesPrestacionesLey;
     
     
 }

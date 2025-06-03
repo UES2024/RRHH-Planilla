@@ -8,7 +8,6 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -34,6 +33,4 @@ public class PrestacionDeLey {
     @Column(name = "regla_prestacion_ley", columnDefinition = "JSON")
     private String reglaPrestacionLey;
 
-    @OneToMany(mappedBy =  "prestacionDeLey")
-    private List<DetallePrestacionLey> detallesPrestacionLey;
 }
