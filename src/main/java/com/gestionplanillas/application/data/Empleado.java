@@ -20,12 +20,12 @@ import lombok.Setter;
 @Getter @Setter
 @NoArgsConstructor
 public class Empleado {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_empleado")
     private Long idEmpleado;
-    
+
     @Column(name = "nombres")
     private String nombres;
 

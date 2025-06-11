@@ -33,7 +33,7 @@ public class ContratoEmpleado {
     @Column(name = "id_contrato_empleado")
     private Long idContratoEmpleado;
 
-    @Column(name = "salarioBaseMensual")
+    @Column(name = "salario_base_mensual")
     private BigDecimal salarioBaseMensual;
 
     @Column(name = "fecha_contrato")

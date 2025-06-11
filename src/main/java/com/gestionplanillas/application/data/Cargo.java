@@ -33,4 +33,8 @@ public class Cargo {
 
     @OneToMany(mappedBy = "cargo", cascade = CascadeType.ALL)
     private List<ContratoEmpleado> contratosEmpleados;
+
+    // Getters necesarios
+    public Long getIdCargo() { return idCargo; }
+    public String getNombreCargo() { return nombreCargo; }
 }
