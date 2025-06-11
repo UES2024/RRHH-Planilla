@@ -1,29 +1,16 @@
 {
-<<<<<<< HEAD
-  "frontendFolder": "C:/Users/black/RRHH-Planilla/./src/main/frontend",
+  "frontendFolder": "C:/Users/black/RRHH-Planilla/src/main/frontend",
   "themeFolder": "themes",
-  "themeResourceFolder": "C:/Users/black/RRHH-Planilla/./src/main/frontend/generated/jar-resources",
+  "themeResourceFolder": "C:/Users/black/RRHH-Planilla/src/main/frontend/generated/jar-resources",
   "staticOutput": "C:/Users/black/RRHH-Planilla/target/classes/META-INF/VAADIN/webapp/VAADIN/static",
   "generatedFolder": "generated",
   "statsOutput": "C:\\Users\\black\\RRHH-Planilla\\target\\classes\\META-INF\\VAADIN\\config",
   "frontendBundleOutput": "C:\\Users\\black\\RRHH-Planilla\\target\\classes\\META-INF\\VAADIN\\webapp",
   "devBundleOutput": "C:/Users/black/RRHH-Planilla/target/dev-bundle/webapp",
   "devBundleStatsOutput": "C:/Users/black/RRHH-Planilla/target/dev-bundle/config",
-  "jarResourcesFolder": "C:/Users/black/RRHH-Planilla/./src/main/frontend/generated/jar-resources",
-=======
-  "frontendFolder": "C:/Users/rolando/Documents/RH Planilla/RRHH-Planilla/src/main/frontend",
-  "themeFolder": "themes",
-  "themeResourceFolder": "C:/Users/rolando/Documents/RH Planilla/RRHH-Planilla/src/main/frontend/generated/jar-resources",
-  "staticOutput": "C:/Users/rolando/Documents/RH Planilla/RRHH-Planilla/target/classes/META-INF/VAADIN/webapp/VAADIN/static",
-  "generatedFolder": "generated",
-  "statsOutput": "C:\\Users\\rolando\\Documents\\RH Planilla\\RRHH-Planilla\\target\\classes\\META-INF\\VAADIN\\config",
-  "frontendBundleOutput": "C:\\Users\\rolando\\Documents\\RH Planilla\\RRHH-Planilla\\target\\classes\\META-INF\\VAADIN\\webapp",
-  "devBundleOutput": "C:/Users/rolando/Documents/RH Planilla/RRHH-Planilla/target/dev-bundle/webapp",
-  "devBundleStatsOutput": "C:/Users/rolando/Documents/RH Planilla/RRHH-Planilla/target/dev-bundle/config",
-  "jarResourcesFolder": "C:/Users/rolando/Documents/RH Planilla/RRHH-Planilla/src/main/frontend/generated/jar-resources",
->>>>>>> 0c1096909aca5298d94b2b79de225e1c51222a83
+  "jarResourcesFolder": "C:/Users/black/RRHH-Planilla/src/main/frontend/generated/jar-resources",
   "themeName": "gestion-planillas",
-  "clientServiceWorkerSource": "C:\\Users\\rolando\\Documents\\RH Planilla\\RRHH-Planilla\\target\\sw.ts",
+  "clientServiceWorkerSource": "C:\\Users\\black\\RRHH-Planilla\\target\\sw.ts",
   "pwaEnabled": false,
   "offlineEnabled": false,
   "offlinePath": "'offline.html'"
