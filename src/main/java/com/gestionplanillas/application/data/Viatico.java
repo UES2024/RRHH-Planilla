@@ -1,6 +1,7 @@
 package com.gestionplanillas.application.data;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.List;
 
 import jakarta.persistence.Id;
@@ -31,7 +32,8 @@ public class Viatico {
 
     @Column(name  = "descripcion")
     private String descripcion;
-
+    @Column(name = "fecha", nullable = false)
+    private LocalDate fecha;
     @ManyToMany(mappedBy =  "viaticos")
     private List<ContratoEmpleado> contratosEmpleados;
     

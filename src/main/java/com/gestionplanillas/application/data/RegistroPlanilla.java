@@ -20,7 +20,8 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "registro_planilla")
-@Getter @Setter
+@Getter
+@Setter
 @NoArgsConstructor
 public class RegistroPlanilla {
     @Id
@@ -40,6 +41,38 @@ public class RegistroPlanilla {
     @Column(name = "horas_extras_nocturnas")
     private Double horasExtrasNocturnas;
 
+    @Column(name = "aguinaldo")
+    private BigDecimal aguinaldo;
+
+    @Column(name = "vacacion")
+    private BigDecimal vacacion;
+
+    @Column(name = "renta")
+    private BigDecimal renta;
+
+    @Column(name = "isss_empleado")
+    private BigDecimal isssEmpleado;
+
+    @Column(name = "isss_patrono")
+    private BigDecimal isssPatrono;
+
+    @Column(name = "afp_empleado")
+    private BigDecimal afpEmpleado;
+
+    @Column(name = "afp_patrono")
+    private BigDecimal afpPatrono;
+
+    @Column(name = "salario_base_periodo")
+    private BigDecimal salarioBasePeriodo;
+
+    @Column(name = "total_devengado")
+    private BigDecimal totalDevengado;
+
+    @Column(name = "total_deducciones")
+    private BigDecimal totalDeducciones;
+
+    @Column(name = "salario_neto")
+    private BigDecimal salarioNeto;
     @ManyToOne()
     @JoinColumn(name = "id_contrato_empleado")
     private ContratoEmpleado contratoEmpleado;
@@ -48,6 +81,5 @@ public class RegistroPlanilla {
     @JoinColumn(name = "id_planilla")
     private Planilla planilla;
 
-    
-    
+
 }

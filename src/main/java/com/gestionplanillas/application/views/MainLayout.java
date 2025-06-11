@@ -5,6 +5,7 @@ import com.gestionplanillas.application.security.AuthenticatedUser;
 //import com.gestionplanillas.application.security.AuthenticatedUser;
 import com.gestionplanillas.application.views.formularionuevoempleado.FormularioNuevoEmpleadoView;
 import com.gestionplanillas.application.views.gestionarplanilla.GestionarPlanillaView;
+import com.gestionplanillas.application.views.gestionarplanilla.PlanillaView;
 import com.gestionplanillas.application.views.inicio.InicioView;
 import com.gestionplanillas.application.views.viewcontrolempleados.ViewControlEmpleadosView;
 import com.vaadin.flow.component.Component;
@@ -166,9 +167,8 @@ public class MainLayout extends AppLayout {
                 new MenuItemInfo("Formulario Nuevo Empleado", LineAwesomeIcon.USER_PLUS_SOLID.create(),
                         FormularioNuevoEmpleadoView.class), //
 
-                new MenuItemInfo("Gestionar Planilla", LineAwesomeIcon.MONEY_BILL_WAVE_SOLID.create(),
-                        GestionarPlanillaView.class), //
-
+                new MenuItemInfo("Gestión de Planillas", LineAwesomeIcon.MONEY_BILL_WAVE_SOLID.create(),
+                        PlanillaView.class)
         };
     }
 

@@ -1,6 +1,7 @@
 package com.gestionplanillas.application.data;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 import org.hibernate.annotations.ManyToAny;
 
@@ -33,6 +34,8 @@ public class Bonificacion {
 
     @Column(name = "descripcion")
     private String descripcion;
+    @Column(name = "fecha", nullable = false) // Es importante que tenga una fecha para el filtro
+    private LocalDate fecha;
 
     @ManyToOne()
     @JoinColumn(name = "id_contrato_empleado")

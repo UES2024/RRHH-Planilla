@@ -55,7 +55,7 @@ public class ContratoEmpleado {
 
     @JoinTable(
         name = "contrato_viatico",
-        joinColumns = @JoinColumn(name = "id_cargo"),
+        joinColumns = @JoinColumn(name = "id_viatico"),
         inverseJoinColumns =  @JoinColumn(name = "id_contrato_empleado")
     )
     @ManyToMany(cascade = CascadeType.ALL)

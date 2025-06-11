@@ -3,14 +3,8 @@ package com.gestionplanillas.application.data;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -26,6 +20,10 @@ public class JornadaLabora {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_jornada_laboral")
     private Long idJornadaLaboral;
+
+    @ManyToOne // Una jornada laboral pertenece a UN contrato de empleado
+    @JoinColumn(name = "id_contrato_empleado", nullable = false) // Columna de la FK
+    private ContratoEmpleado contratoEmpleado;
 
     @Column(name = "hora_inicio")
     private LocalDateTime horaInicio;

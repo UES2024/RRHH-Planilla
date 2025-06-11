@@ -1,5 +1,6 @@
 package com.gestionplanillas.application.data;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import jakarta.persistence.Id;
@@ -29,6 +30,10 @@ public class JornadaExtra {
     @OneToOne(optional = false)
     @JoinColumn(name = "id_jornada_laboral")
     private JornadaLabora jornadaLaboral;
+
+
+    @Column(name = "fecha", nullable = false)
+    private LocalDate fecha;
 
      @Column(name = "hora_inicio")
     private LocalDateTime horaInicio;
