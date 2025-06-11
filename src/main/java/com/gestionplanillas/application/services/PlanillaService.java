@@ -473,4 +473,7 @@ public class PlanillaService {
         // Este metodo usa el PlanillaRepository para buscar planillas con paginación y filtro.
         return planillaRepository.findAll(filter, pageable);
     }
+    public Optional<RegistroPlanilla> findRegistroById(Long id) {
+        return registroPlanillaRepository.findById(id);
+    }
 }
