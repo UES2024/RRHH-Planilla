@@ -34,7 +34,7 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @PageTitle("View Control Empleados")
-@Route("view-control-empleados")
+@Route("")
 @Menu(order = 1, icon = LineAwesomeIconUrl.ADDRESS_BOOK_SOLID)
 @PermitAll
 @Uses(Icon.class)
