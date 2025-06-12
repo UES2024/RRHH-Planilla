@@ -162,11 +162,11 @@ public class MainLayout extends AppLayout {
         return new MenuItemInfo[]{ //
                 new MenuItemInfo("Inicio", LineAwesomeIcon.HOME_SOLID.create(), InicioView.class), //
 
-                new MenuItemInfo("View Control Empleados", LineAwesomeIcon.ADDRESS_BOOK_SOLID.create(),
+                new MenuItemInfo("Control Empleados", LineAwesomeIcon.ADDRESS_BOOK_SOLID.create(),
                         ViewControlEmpleadosView.class), //
 
-                new MenuItemInfo("Formulario Nuevo Empleado", LineAwesomeIcon.USER_PLUS_SOLID.create(),
-                        FormularioNuevoEmpleadoView.class), //
+              /* new MenuItemInfo("Formulario Nuevo Empleado", LineAwesomeIcon.USER_PLUS_SOLID.create(),
+                        FormularioNuevoEmpleadoView.class),*/
 
 
                 new MenuItemInfo("Gestión de Planillas", LineAwesomeIcon.MONEY_BILL_WAVE_SOLID.create(),
@@ -174,8 +174,8 @@ public class MainLayout extends AppLayout {
                 /*new MenuItemInfo("Gestionar Planilla", LineAwesomeIcon.MONEY_BILL_WAVE_SOLID.create(),
                         GestionarPlanillaView.class), //*/ 
 
-                new MenuItemInfo("Consultar Planilla", LineAwesomeIcon.CLIPBOARD_LIST_SOLID.create(),
-                        ConsultarPlanillaView.class), //
+                /*new MenuItemInfo("Consultar Planilla", LineAwesomeIcon.CLIPBOARD_LIST_SOLID.create(),
+                        ConsultarPlanillaView.class), /*/
 
 
         };

@@ -3,17 +3,20 @@ import com.gestionplanillas.application.data.Planilla;
 import com.gestionplanillas.application.data.RegistroPlanilla;
 import com.gestionplanillas.application.services.PlanillaService; // Inyectar el servicio
 import com.vaadin.flow.component.Composite;
+import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.datepicker.DatePicker;
 import com.vaadin.flow.component.dependency.Uses;
 import com.vaadin.flow.component.dialog.Dialog;
+import com.vaadin.flow.component.grid.ColumnTextAlign;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.html.H4;
 import com.vaadin.flow.component.html.H5;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.icon.Icon;
+import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
@@ -184,6 +187,7 @@ public class ConsultarPlanillasView extends Composite<VerticalLayout> {
     }
 
     private void showPlanillaDetailsDialog(Planilla planilla) {
+
         Dialog dialog = new Dialog();
         dialog.setCloseOnEsc(true);
         dialog.setCloseOnOutsideClick(true);
@@ -203,6 +207,7 @@ public class ConsultarPlanillasView extends Composite<VerticalLayout> {
         // --- INICIO DE LA MODIFICACIÓN DE COLUMNAS DEL REGISTROGRID ---
         registroGrid.setColumns(
                 // Información del empleado
+                "idRegistroPlanilla",
                 "contratoEmpleado.empleado.nombres",
                 "contratoEmpleado.empleado.apellidos",
                 "contratoEmpleado.salarioBaseMensual", // Salario Base Mensual del contrato
@@ -229,6 +234,8 @@ public class ConsultarPlanillasView extends Composite<VerticalLayout> {
         );
 
         // Ajustar los headers para que sean más legibles
+       // registroGrid.addColumn(RegistroPlanilla::getIdRegistroPlanilla).setHeader("ID Planilla").setAutoWidth(true);
+        registroGrid.getColumnByKey("idRegistroPlanilla").setHeader("ID Planilla");
         registroGrid.getColumnByKey("contratoEmpleado.empleado.nombres").setHeader("Nombres Empleado");
         registroGrid.getColumnByKey("contratoEmpleado.empleado.apellidos").setHeader("Apellidos Empleado");
 
@@ -246,6 +253,20 @@ public class ConsultarPlanillasView extends Composite<VerticalLayout> {
         registroGrid.getColumnByKey("afpPatrono").setHeader("AFP Patrono");
         registroGrid.getColumnByKey("aguinaldo").setHeader("Aguinaldo");
         registroGrid.getColumnByKey("vacacion").setHeader("Vacación");
+
+        Grid.Column<RegistroPlanilla> accionColumn = registroGrid.addComponentColumn(registro -> {
+            Button imprimirButton = new Button("Imprimir Boleta");
+            imprimirButton.addThemeVariants(ButtonVariant.LUMO_PRIMARY, ButtonVariant.LUMO_SMALL);
+            imprimirButton.setIcon(new Icon(VaadinIcon.PRINT));
+            imprimirButton.addClickListener(event -> {
+                imprimirButton.getElement().executeJs(
+                        "window.open($0, '_blank');",
+                        "/boleta-pdf/" + registro.getIdRegistroPlanilla()
+                );
+            });
+            return imprimirButton;
+        }).setHeader("Acción").setAutoWidth(true).setTextAlign(ColumnTextAlign.CENTER);
+
 
         // Opcional: Auto-ajustar ancho de todas las columnas y permitir el desplazamiento
         registroGrid.getColumns().forEach(col -> col.setAutoWidth(true));

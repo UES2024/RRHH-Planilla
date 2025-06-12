@@ -4,6 +4,7 @@ com\gestionplanillas\application\data\Viatico.class
 com\gestionplanillas\application\repository\EmpleadoCustomRepository.class
 com\gestionplanillas\application\data\Horario.class
 com\gestionplanillas\application\views\MainLayout.class
+com\gestionplanillas\application\views\boleta\BoletaPDFView.class
 com\gestionplanillas\application\security\SecurityConfiguration.class
 com\gestionplanillas\application\repository\RegistroPlanillaRepository.class
 com\gestionplanillas\application\default_configurations\RunConfiguration.class

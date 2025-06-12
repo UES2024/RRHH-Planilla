@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "frontendFolder": "C:/Users/black/RRHH-Planilla/./src/main/frontend",
   "themeFolder": "themes",
   "themeResourceFolder": "C:/Users/black/RRHH-Planilla/./src/main/frontend/generated/jar-resources",
@@ -9,8 +10,20 @@
   "devBundleOutput": "C:/Users/black/RRHH-Planilla/target/dev-bundle/webapp",
   "devBundleStatsOutput": "C:/Users/black/RRHH-Planilla/target/dev-bundle/config",
   "jarResourcesFolder": "C:/Users/black/RRHH-Planilla/./src/main/frontend/generated/jar-resources",
+=======
+  "frontendFolder": "C:/Users/rolando/Documents/RH Planilla/RRHH-Planilla/src/main/frontend",
+  "themeFolder": "themes",
+  "themeResourceFolder": "C:/Users/rolando/Documents/RH Planilla/RRHH-Planilla/src/main/frontend/generated/jar-resources",
+  "staticOutput": "C:/Users/rolando/Documents/RH Planilla/RRHH-Planilla/target/classes/META-INF/VAADIN/webapp/VAADIN/static",
+  "generatedFolder": "generated",
+  "statsOutput": "C:\\Users\\rolando\\Documents\\RH Planilla\\RRHH-Planilla\\target\\classes\\META-INF\\VAADIN\\config",
+  "frontendBundleOutput": "C:\\Users\\rolando\\Documents\\RH Planilla\\RRHH-Planilla\\target\\classes\\META-INF\\VAADIN\\webapp",
+  "devBundleOutput": "C:/Users/rolando/Documents/RH Planilla/RRHH-Planilla/target/dev-bundle/webapp",
+  "devBundleStatsOutput": "C:/Users/rolando/Documents/RH Planilla/RRHH-Planilla/target/dev-bundle/config",
+  "jarResourcesFolder": "C:/Users/rolando/Documents/RH Planilla/RRHH-Planilla/src/main/frontend/generated/jar-resources",
+>>>>>>> b147e54d4985ea117d759b3efdb49495b91ae011
   "themeName": "gestion-planillas",
-  "clientServiceWorkerSource": "C:\\Users\\black\\RRHH-Planilla\\target\\sw.ts",
+  "clientServiceWorkerSource": "C:\\Users\\rolando\\Documents\\RH Planilla\\RRHH-Planilla\\target\\sw.ts",
   "pwaEnabled": false,
   "offlineEnabled": false,
   "offlinePath": "'offline.html'"
